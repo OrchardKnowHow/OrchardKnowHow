@@ -16,8 +16,6 @@ namespace OrchardKnowHow
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            // The following line enables Application Insights telemetry collection.
-            services.AddApplicationInsightsTelemetry();
             services.AddOrchardCms();
         }
 
@@ -29,7 +27,6 @@ namespace OrchardKnowHow
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseStaticFiles();
             app.UseOrchardCore();
         }
     }
